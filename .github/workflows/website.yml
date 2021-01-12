@@ -8,13 +8,20 @@ on:
     branches: [ master ]
 
 jobs:
-  [Website Building]:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [15.x]
     steps:
     - uses: actions/checkout@v2
+    - name: Deploy to surge.sh
+      uses: dswistowski/surge-sh-action@v1
+      with:
+        domain: 'sm-cka.surge.sh'
+        project: '.'
+        login: ${{ secrets.surge_login }}
+        token: ${{ secrets.surge_token }}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
