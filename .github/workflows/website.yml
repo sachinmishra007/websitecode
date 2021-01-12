@@ -24,7 +24,7 @@ jobs:
     - name: Deploy to surge.sh
       uses: dswistowski/surge-sh-action@v1
       with:
-        domain: 'sm-cka.surge.sh'
+        domain: ${{ secrets.surge_domain }}
         project: 'dist/angular-routing/'
         login: ${{ secrets.surge_login }}
         token: ${{ secrets.surge_token }}
