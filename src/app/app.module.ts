@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { YoutubeSkeletonComponent } from './youtube-skeleton/youtube-skeleton.component';
 import { CustonCheckboxComponent } from './custon-checkbox/custon-checkbox.component';
-
+import { HttpClientModule } from "@angular/common/http";
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,8 @@ import { CustonCheckboxComponent } from './custon-checkbox/custon-checkbox.compo
     BrowserModule,
     ReactiveFormsModule,
     DragDropModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
     // AppRoutingModule
   ],
   providers: [],
