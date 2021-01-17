@@ -4,7 +4,7 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from "@angular/cdk/dr
 import { Router } from '@angular/router';
 import Typed from 'typed.js';
 import AOS from 'aos';
-
+import { HttpClient } from "@angular/common/http";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -58,7 +58,8 @@ export class AppComponent implements OnInit {
   constructor(
     // private _rourte: Router,
     private fb: FormBuilder,
-    private _zone: NgZone
+    private _zone: NgZone,
+    private _httpClient: HttpClient
   ) {
 
 
@@ -349,5 +350,19 @@ export class AppComponent implements OnInit {
   }
   download() {
     window.open("https://drive.google.com/file/d/16GX5lZjIqL7OTA4GoWTWnEjZ8rbK8JrY/view?usp=drivesdk", "_blank")
+  }
+  message;
+  Contact() {
+    this._httpClient.post("https://cms-api-in.herokuapp.com/api/user/sendEmail", {
+      "email": "sachinmishra609@gmail.com",
+      "firstname": "sachin",
+      "lastname": "mishra",
+      "subject": "firtsinquiry",
+      "description": "description"
+    }).subscribe((_response) => {
+      this.message = _response;
+    }, (error: any) => {
+      this.message = error;
+    })
   }
 }
