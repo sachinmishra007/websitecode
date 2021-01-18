@@ -511,7 +511,7 @@
     <div class="max-width">
         <h2 class="education-title">Education</h2>
         <div class="education-info">
-            <div data-aos="fade-left"  class="education-card">
+            <div data-aos="fade-left" class="education-card">
                 <div class="education-details">
                     <span>Master of Computer Application <span class="course-initials">( MCA )</span></span>
                     <span (click)="checkMCA(mca)" #mca><i class="fas fa-plus"></i></span>
@@ -581,12 +581,59 @@
     </div>
 </section>
 
-<!-- <section>
-    <div data-aos="fade-up" class="hire-me" (click)="Contact()">
-        Contact
-        {{ message | json }}
+<section class="contact" id="contact">
+    <div data-aos="fade-up" class="max-width">
+        <h2 class="title">Contact</h2>
+        <div #infoMessage class="message-info">
+            <div class="info-icon">
+                <i class="fas fa-info-circle"></i>
+            </div>
+            <div class="info-message">
+                Please Enter the First Name
+            </div>
+            <div class="info-icon" (click)="close()">
+                <i class="fas fa-times-circle"></i>
+            </div>
+        </div>
+        <div  class="main-contact-form">
+            <div data-aos="fade-left" class="address-info">
+                <div class="address-tile">
+                    <div class="icons"><i class="fas fa-envelope-open-text"></i></div>
+                    <div class="value">sachinmishra609@gmail.com</div>
+                </div>
+                <div class="address-tile">
+                    <div class="icons"><i class="fas fa-phone"></i></div>
+                    <div class="value">+91-9594500523</div>
+                </div>
+                <div class="address-tile">
+                    <div class="icons"><i class="far fa-address-card"></i></div>
+                    <div class="value">Mumbai,Maharashtra-400016</div>
+                </div>
+            </div>
+            <div data-aos="fade-right" class="sendinfo">
+                <div class="padding10 namedetails send-name">
+                    <input [(ngModel)]="info.firstname" type="text" placeholder="First Name">
+                    <input [(ngModel)]="info.lastname" type="text" placeholder="Last Name">
+                </div>
+                <div class="padding10 send-name">
+                    <input [(ngModel)]="info.subject" type="text" placeholder="Subject">
+                </div>
+                <div class="padding10 send-name">
+                    <input [(ngModel)]="info.email" type="text" placeholder="Email">
+                </div>
+                <div class="padding10 send-name">
+                    <textarea [(ngModel)]="info.description" name="Description" rows="4" cols="50"
+                        placeholder="Description"></textarea>
+                </div>
+                <div class="padding10 button" (click)="submit(submitElem)">
+                    <div class="submit-btn" #submitElem>
+                        Submit
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</section> -->
+</section>
 
 <section class="footer" id="footer">
     <div class="max-width">

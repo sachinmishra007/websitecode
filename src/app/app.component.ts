@@ -4,7 +4,7 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from "@angular/cdk/dr
 import { Router } from '@angular/router';
 import Typed from 'typed.js';
 import AOS from 'aos';
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,7 +14,15 @@ import { HttpClient } from "@angular/common/http";
 
 
 export class AppComponent implements OnInit {
-  @ViewChild('navbar') navbar
+  @ViewChild('navbar') navbar;
+  @ViewChild('infoMessage') infoMessage;
+  info = {
+    firstname: '',
+    lastname: '',
+    subject: '',
+    email: '',
+    description: ''
+  };
   myForm: FormGroup;
   todo = [];
   done = [];
@@ -351,18 +359,73 @@ export class AppComponent implements OnInit {
   download() {
     window.open("https://drive.google.com/file/d/16GX5lZjIqL7OTA4GoWTWnEjZ8rbK8JrY/view?usp=drivesdk", "_blank")
   }
-  message;
-  Contact() {
-    this._httpClient.post("https://cms-api-in.herokuapp.com/api/user/sendEmail", {
-      "email": "sachinmishra609@gmail.com",
-      "firstname": "sachin",
-      "lastname": "mishra",
-      "subject": "firtsinquiry",
-      "description": "description"
-    }).subscribe((_response) => {
-      this.message = _response;
-    }, (error: any) => {
-      this.message = error;
-    })
+  // message;
+  keyUp(text: string) {
+    text = text[0].toUpperCase() + text.substring(1);
+  }
+  saveRecord() {
+    let headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this._httpClient.post("https://cms-api-in.herokuapp.com/api/user/sendEmail",
+      JSON.stringify({
+        "email": this.info.email,
+        "firstname": this.info.firstname,
+        "lastname": this.info.lastname,
+        "subject": this.info.subject,
+        "description": this.info.description
+      }), {
+      headers: headers
+    });
+  }
+  submit(submit) {
+    let message: string = '';
+    if (this.info.firstname == '') {
+      message = 'Please enter the first name';
+    }
+    else if (this.info.lastname == '') {
+      message = 'Please enter the last name';
+    }
+    else if (this.info.subject == '') {
+      message = 'Please enter the subject line';
+    }
+    else if (this.info.email == '') {
+      message = 'Please enter the email';
+    }
+    else if (this.info.description == '') {
+      message = 'Please enter the description';
+    }
+    if (message != '') {
+      this.infoMessage.nativeElement.style.display = 'flex';
+      this.infoMessage.nativeElement.children[1].innerText = message;
+    }
+    else {
+      if (submit.innerText == 'Submit') {
+        submit.innerText = 'Loading ...'
+        submit.style.cursor = 'not-allowed';
+        this.saveRecord().subscribe((_response) => {
+          submit.innerText = 'Submit';
+          this.infoMessage.nativeElement.style.display = 'flex';
+          this.infoMessage.nativeElement.children[1].innerText = 'Query has been Submitted !';
+          submit.style.cursor = 'pointer';
+          this.clear();
+        }, (_error) => {
+          console.log(_error);
+          submit.innerText = 'Submit';
+          submit.style.cursor = 'pointer';
+          this.clear();
+        });
+      }
+    }
+  }
+  clear() {
+    this.info = {
+      firstname: '',
+      lastname: '',
+      subject: '',
+      email: '',
+      description: ''
+    };
+  }
+  close() {
+    this.infoMessage.nativeElement.style.display = 'none';
   }
 }

@@ -1029,6 +1029,99 @@
   height: 50px;
 }
 
+.contact {
+  .max-width {
+    .title {
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .message-info {
+      display: none;
+      border: 1px solid #ecc8c8;
+      padding: 20px;
+      justify-content: sp;
+      border-radius: 5px;
+      background-color: #f18d08;
+      color: white;
+      .info-message {
+        flex: 1;
+        padding-left: 5px;
+        padding-top: 2px;
+      }
+      .info-icon {
+        font-size: 20px;
+        // color: black;
+        // flex: 1;
+        cursor: pointer;
+      }
+    }
+    .main-contact-form {
+      display: flex;
+      .address-info {
+        width: 50%;
+        padding-top: 10px;
+        .address-tile {
+          display: flex;
+          margin-bottom: 20px;
+          border: 1px solid #ddfbdd;
+          border-radius: 5px;
+          .icons {
+            background: #e0e0ef;
+            padding: 17px;
+            width: 15%;
+            text-align: center;
+            font-size: 30px;
+          }
+          .value {
+            margin-top: 15px;
+            margin-left: 10px;
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+      }
+      .sendinfo {
+        .namedetails {
+          display: flex;
+        }
+        .padding10 {
+          padding-top: 10px;
+        }
+        width: 50%;
+        .button {
+          padding-bottom: 10px;
+        }
+        .submit-btn {
+          width: 20%;
+          background-color: #2f355a;
+          padding: 10px;
+          text-align: center;
+          font-family: "Noto Sans";
+          font-size: 15px;
+          color: white;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        input,
+        textarea {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          margin-left: 5px;
+          margin-right: 5px;
+          border-radius: 5px;
+          border: 0.1rem solid #ece5e5;
+          outline: none;
+          padding-left: 10px;
+          width: 100%;
+          font-family: "Noto Sans";
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 941px) {
   .max-width {
     padding: 0 60px;
@@ -1243,6 +1336,23 @@
   .education-details {
     padding: 15px;
   }
+
+  .contact {
+    .max-width {
+      .main-contact-form {
+        .address-info {
+          width: 100%;
+        }
+        .sendinfo {
+          width: 100%;
+          .submit-btn {
+            width: 100%;
+          }
+        }
+        flex-direction: column;
+      }
+    }
+  }
 }
 
 @media (max-width: 411px) {
@@ -1327,6 +1437,22 @@
   section {
     width: 360px;
   }
+  .contact {
+    .max-width {
+      .main-contact-form {
+        .address-info {
+          width: 100%;
+        }
+        .sendinfo {
+          width: 100%;
+          .submit-btn {
+            width: 100%;
+          }
+        }
+        flex-direction: column;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 688px) and (max-height: 343px) {
@@ -1351,6 +1477,23 @@
     flex-direction: column;
     .card {
       width: 100%;
+    }
+  }
+
+  .contact {
+    .max-width {
+      .main-contact-form {
+        .address-info {
+          width: 100%;
+        }
+        .sendinfo {
+          width: 100%;
+          .submit-btn {
+            width: 100%;
+          }
+        }
+        flex-direction: column;
+      }
     }
   }
 }
