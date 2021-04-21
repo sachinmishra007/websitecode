@@ -277,7 +277,7 @@
   position: fixed;
   width: 100%;
   padding: 15px 0;
-  // background: #654062;
+  // background: #ffc288;
   font-family: "Noto Sans", sans-serif;
 }
 
@@ -331,7 +331,8 @@
 
 .home {
   display: flex;
-  background-color: black;
+  // background-color: black;
+  background: #2d2a22;
   /* background: url(image.jpg) no-repeat center; */
   height: 100vh;
   color: #ffff;
@@ -706,7 +707,9 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
+.employment .firm-info{
+  font-weight: 500;
+}
 .employment .timeline-center {
   position: relative;
 }
@@ -754,6 +757,28 @@
   font-weight: 600;
   margin-bottom: 10px;
   letter-spacing: 2px;
+}
+
+.timeline-content {
+  .company-info{
+    display: flex;
+    // justify-content: center;
+  }
+  .compnay-logo{
+    // width: 50%;
+    // flex: 1;
+    // margin: auto;
+    // text-align: center;
+    img{
+      width: 100px;
+      height: 70px;
+    }
+  }
+  .company-details{
+    margin-left: 10px;
+    width: 100%;
+  }
+  
 }
 
 .timeline:before {
@@ -1230,13 +1255,19 @@
   }
   .timeline-content .designation-info {
     flex-direction: column-reverse;
-    align-items: flex-start;
+    // align-items: flex-start;
   }
   .timeline ul li {
     border-radius: 5px;
   }
   .education-details {
     padding: 15px;
+  }
+  .timeline-content{
+    .company-info{
+      display: block;
+      text-align: center;
+    }
   }
 }
 
@@ -1453,6 +1484,7 @@
       }
     }
   }
+   
 }
 
 @media only screen and (min-width: 688px) and (max-height: 343px) {

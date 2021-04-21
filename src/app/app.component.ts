@@ -357,7 +357,7 @@ export class AppComponent implements OnInit {
     }
   }
   download() {
-    window.open("https://drive.google.com/file/d/16GX5lZjIqL7OTA4GoWTWnEjZ8rbK8JrY/view?usp=drivesdk", "_blank")
+    window.open("https://drive.google.com/file/d/1XiCQ9JDaJbtfmYnrztbpqo75JTXuLxlw/view?usp=sharing", "_blank")
   }
   // message;
   keyUp(text: string) {
