@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import Typed from 'typed.js';
 import AOS from 'aos';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
+import * as moment from 'moment';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,6 +17,9 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 export class AppComponent implements OnInit {
   @ViewChild('navbar') navbar;
   @ViewChild('infoMessage') infoMessage;
+
+  expInfo = {} as any;
+
   info = {
     firstname: '',
     lastname: '',
@@ -155,6 +159,7 @@ export class AppComponent implements OnInit {
     };
 
     const typed = new Typed('.typeinfo', options);
+    this.calculateExperience();
   }
 
   // drag(event: CdkDragDrop<string[]>) {
@@ -427,5 +432,20 @@ export class AppComponent implements OnInit {
   }
   close() {
     this.infoMessage.nativeElement.style.display = 'none';
+  }
+
+  calculateExperience() {
+    const cuDate = new Date();
+    const year: number = cuDate.getFullYear();
+    const month: number = cuDate.getMonth();
+    const date: number = cuDate.getDate();
+    const seedCoreGroup = moment(new Date('2015-07-01')).diff(moment(new Date('2014-12-01')), 'months');
+    const edulearnExp = moment(new Date('2012-07-01')).diff(moment(new Date('2011-06-01')), 'month');
+
+    const totalExp = (seedCoreGroup / 12 + edulearnExp / 12) + moment(new Date()).diff(moment(new Date('2015-08-26')), 'month') / 12;
+     
+    this.expInfo = {
+      totalExperience: totalExp.toFixed(1)
+    }
   }
 }
