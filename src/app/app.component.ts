@@ -281,16 +281,20 @@ export class AppComponent implements OnInit {
     else {
       element.children[0].classList.remove('fa-times')
       element.children[0].classList.add('fa-bars');
-
-
     }
     const ele: any = document.getElementsByClassName('menu');
+    const btn67: any = document.getElementsByClassName('btn-67');
+
     if (ele[0].classList.contains('active')) {
       ele[0].classList.remove('active');
+      btn67[0].removeAttribute("style", "z-index:0");
     }
     else {
       ele[0].classList.add('active');
+      btn67[0].setAttribute("style", "z-index:-1");
     }
+
+
   }
 
   hidemenu(element) {
@@ -362,7 +366,7 @@ export class AppComponent implements OnInit {
     }
   }
   download() {
-    window.open("https://drive.google.com/file/d/1XiCQ9JDaJbtfmYnrztbpqo75JTXuLxlw/view?usp=sharing", "_blank")
+    window.open("assets/resume/Sachin_Subhash_Mishra_Resume.pdf", "_blank")
   }
   // message;
   keyUp(text: string) {
@@ -443,7 +447,7 @@ export class AppComponent implements OnInit {
     const edulearnExp = moment(new Date('2012-07-01')).diff(moment(new Date('2011-06-01')), 'month');
 
     const totalExp = (seedCoreGroup / 12 + edulearnExp / 12) + moment(new Date()).diff(moment(new Date('2015-08-26')), 'month') / 12;
-     
+
     this.expInfo = {
       totalExperience: totalExp.toFixed(1)
     }
