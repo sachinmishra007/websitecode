@@ -366,7 +366,7 @@ export class AppComponent implements OnInit {
     }
   }
   download() {
-    window.open("https://github.com/sachinmishra007/websitecode/blob/master/src/assets/resume/Sachin_Subhash_Mishra_Resume.pdf", "_blank")
+    window.open("https://github.com/sachinmishra007/websitecode/raw/master/src/assets/resume/Sachin_Subhash_Mishra_Resume.pdf", "_blank")
   }
   // message;
   keyUp(text: string) {
