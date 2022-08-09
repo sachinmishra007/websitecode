@@ -7,6 +7,12 @@
         "statements"
       ]
     },
+    "linterOptions": {
+      "exclude": [
+        "*.json",
+        "**/*.json"
+      ]
+    },
     "array-type": false,
     "arrow-return-shorthand": true,
     "curly": true,

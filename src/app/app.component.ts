@@ -6,6 +6,10 @@ import Typed from 'typed.js';
 import AOS from 'aos';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import * as moment from 'moment';
+//import * as ParticlesConfig from '../assets/particlesjs-config.json';
+// const technologyShields = require("../app/simple-icons");
+import * as technologyShields from '../app/simple-icons';
+declare var particlesJS: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -65,6 +69,7 @@ export class AppComponent implements OnInit {
     }
   ] as any;
   weeks = [];
+  techTags: string = '';
   connectedTo = [];
   dataInfo = [];
   constructor(
@@ -74,7 +79,8 @@ export class AppComponent implements OnInit {
     private _httpClient: HttpClient
   ) {
 
-
+    this.techTags = technologyShields.get(["microsoftazure", "kubernetes", "amazoneks", "docker",
+      "azuredevops", "azurefunctions", 'azurepipelines', "microsoftsqlserver", "mongodb", "github", "jenkins", "typescript", "git", "eslint", "cypress", 'playwright', "javascript", "visualstudiocode", 'angular', 'react', 'svelte', 'vuedotjs', 'html5', 'nuget', "nodedotjs", 'jira', 'css3', 'bootstrap', 'webpack', 'microsoftonenote', 'microsoftexcel', 'npm', 'jfrog', 'azureartifacts'], "HTML");
 
 
     for (let item of this.itemList) {
@@ -83,7 +89,7 @@ export class AppComponent implements OnInit {
     // this.weeks = [
     //   {
     //     id: 'week-1',
-    //     weeklist: [
+    //     weeklist: [k
     //       "item 1",
     //       "item 2",
     //       "item 3",
@@ -127,6 +133,117 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 400,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#fff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 10,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": false,
+          "distance": 500,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 2
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "bottom",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "bubble"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 0.5
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 4,
+            "duration": 0.3,
+            "opacity": 1,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    }, () => {
+    });
     // this.myForm = this.fb.group({
     //   email: ['', [
     //     Validators.required,
@@ -284,14 +401,20 @@ export class AppComponent implements OnInit {
     }
     const ele: any = document.getElementsByClassName('menu');
     const btn67: any = document.getElementsByClassName('btn-67');
-
+    const homeImage: any = document.getElementsByClassName('home-image');
+    const particle: any = document.getElementById('particles-js');
+    // debugger
     if (ele[0].classList.contains('active')) {
       ele[0].classList.remove('active');
       btn67[0].removeAttribute("style", "z-index:0");
+      // particle.removeAttribute("style", "z-index:0");
+      homeImage[0].removeAttribute("style", "z-index:-1 !important");
     }
     else {
       ele[0].classList.add('active');
       btn67[0].setAttribute("style", "z-index:-1");
+      // particle.setAttribute("style", "z-index:0");
+      homeImage[0].setAttribute("style", "z-index:-1 !important");
     }
 
 
@@ -302,6 +425,8 @@ export class AppComponent implements OnInit {
     ele[0].classList.remove('active');
     element.children[0].classList.remove('fa-times')
     element.children[0].classList.add('fa-bars');
+    const homeImage: any = document.getElementsByClassName('home-image');
+    homeImage[0].removeAttribute("style", "z-index:-1 !important");
   }
   checkMCA(element) {
     if (element.parentElement.parentElement.children[1].classList

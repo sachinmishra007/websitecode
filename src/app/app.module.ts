@@ -12,9 +12,7 @@ import { HttpClientModule } from "@angular/common/http";
     AppComponent,
     YoutubeSkeletonComponent,
     CustonCheckboxComponent,
-    
- 
- 
+  
   ],
   imports: [
     BrowserModule,

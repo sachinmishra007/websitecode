@@ -16,5 +16,10 @@
     {
       "path": ".//tsconfig.worker.json"
     }
-]
+  ],
+  "compilerOptions": {
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  }
 }

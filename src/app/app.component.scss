@@ -286,7 +286,21 @@
   background: #2A0944;
   transition: background 0.3s ease-in-out;
   border-bottom: 1px solid #463535;
-  z-index: 1;
+  z-index: 2;
+}
+
+.tecgTags {
+  padding-top: 50px;
+  img{
+    height: 25px;
+  }
+}
+
+.home-image {
+  z-index: 1 !important;
+}
+.skill-content .right{
+  margin-top: 12px;
 }
 
 .navbar.sticky .logo span {
@@ -335,6 +349,7 @@
   background: #2A0944;
   /* background: url(image.jpg) no-repeat center; */
   height: 100vh;
+  z-index: 0;
   color: #ffff;
   min-height: 550px;
   min-height: 550px;
@@ -553,7 +568,7 @@
 
 .skill-content .left {
   width: 50%;
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 100px;
   padding-left: 20px;
   padding-right: 20px;
@@ -1298,6 +1313,7 @@
   .skill-content .right {
     width: 100%;
     padding-bottom: 30px;
+  
   }
 
   .certification-content {
