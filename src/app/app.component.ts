@@ -79,9 +79,9 @@ export class AppComponent implements OnInit {
     private _httpClient: HttpClient
   ) {
 
-    this.techTags = technologyShields.get(["microsoftazure", "kubernetes", "amazoneks", "docker",
-      "azuredevops", "azurefunctions", 'azurepipelines', "microsoftsqlserver", "mongodb", "github", "jenkins", "typescript", "git", "eslint", "cypress", 'playwright', "javascript", "visualstudiocode", 'angular', 'react', 'svelte', 'vuedotjs', 'html5', 'nuget', "nodedotjs", 'jira', 'css3', 'bootstrap', 'webpack', 'microsoftonenote', 'microsoftexcel', 'npm', 'jfrog', 'azureartifacts'], "HTML");
 
+    this.techTags = technologyShields.get(["microsoftazure", "kubernetes", "amazoneks", "docker",
+      "azuredevops", "azurefunctions", 'azurepipelines', "microsoftsqlserver", "mongodb", "github", "jenkins", "typescript", "git", "eslint", "cypress", 'playwright', "javascript", "visualstudiocode", 'angular', 'react', 'svelte', 'vuedotjs', 'html5', 'nuget', "nodedotjs", 'jira', 'css3', 'bootstrap', 'webpack', 'microsoftonenote', 'microsoftexcel', 'githubactions', 'npm', 'jfrog', 'azureartifacts'], "HTML");
 
     for (let item of this.itemList) {
       this.connectedTo.push(item.id);
