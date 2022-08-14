@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "release": "ng build --prod && cd dist/angular-routing/ && surge --project=./ --domain https://sm-cka.surge.sh"
+    "release": "ng build --prod --aot --base-href ./&& cd dist/angular-routing/ && surge --project=./ --domain https://sm-cka.surge.sh"
   },
   "private": true,
   "dependencies": {
