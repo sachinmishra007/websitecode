@@ -25,6 +25,6 @@ jobs:
       uses: dswistowski/surge-sh-action@v1
       with:
         domain: ${{ secrets.surge_domain }}
-        project: 'dist/angular-routing/'
+        project: 'dist/portfolio/'
         login: ${{ secrets.surge_login }}
         token: ${{ secrets.surge_token }}
