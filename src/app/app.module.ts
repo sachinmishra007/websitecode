@@ -1,26 +1,28 @@
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component'; 
-import { DragDropModule } from '@angular/cdk/drag-drop';
-import { YoutubeSkeletonComponent } from './youtube-skeleton/youtube-skeleton.component';
-import { CustonCheckboxComponent } from './custon-checkbox/custon-checkbox.component';
-import { HttpClientModule } from "@angular/common/http";
+import { AppComponent } from './app.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
-    AppComponent,
-    YoutubeSkeletonComponent,
-    CustonCheckboxComponent,
-  
+    AppComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    DragDropModule,
     FormsModule,
-    HttpClientModule
-    // AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

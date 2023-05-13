@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, HostListener, InjectionToken, Injector, NgZone, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { CdkDragDrop, moveItemInArray, transferArrayItem } from "@angular/cdk/drag-drop";
+// import { CdkDragDrop, moveItemInArray, transferArrayItem } from "@angular/cdk/drag-drop";
 import { Router } from '@angular/router';
 import Typed from 'typed.js';
-import AOS from 'aos';
+import * as AOS from 'aos';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import * as moment from 'moment';
 //import * as ParticlesConfig from '../assets/particlesjs-config.json';
@@ -19,8 +19,8 @@ declare var particlesJS: any;
 
 
 export class AppComponent implements OnInit {
-  @ViewChild('navbar') navbar;
-  @ViewChild('infoMessage') infoMessage;
+  @ViewChild('navbar') navbar: any;
+  @ViewChild('infoMessage') infoMessage: any;
 
   expInfo = {} as any;
 
@@ -31,11 +31,10 @@ export class AppComponent implements OnInit {
     email: '',
     description: ''
   };
-  myForm: FormGroup;
+  // myForm: FormGroup;
   todo = [];
   done = [];
 
-  private webWorker: Worker;
   itemList = [
     {
       id: 'week-1',
@@ -69,9 +68,9 @@ export class AppComponent implements OnInit {
     }
   ] as any;
   weeks = [];
-  techTags: string = '';
-  connectedTo = [];
-  dataInfo = [];
+  techTags: any = '';
+  connectedTo: any = [];
+  dataInfo: any = [] as any;
   constructor(
     // private _rourte: Router,
     private fb: FormBuilder,
@@ -333,42 +332,7 @@ export class AppComponent implements OnInit {
   //   this.phoneForms.removeAt(i)
   // }
 
-  drop(event: CdkDragDrop<string[]>) {
-    //if movement if within the same container 
-
-    if (event.previousContainer === event.container) {
-      moveItemInArray(
-        event.container.data, event.previousIndex, event.currentIndex);
-    }
-
-    //if movement if to other containers 
-
-    else {
-      transferArrayItem(event.previousContainer.data,
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex);
-    }
-  }
-  output
-  number
-
-  calcFib() {
-    this.output = "Loading....";
-    this.active();
-    this.webWorker.postMessage(this.number)
-  }
-
-  active() {
-    const thisRef = this;
-    if (typeof Worker !== 'undefined') {
-      this.webWorker = new Worker('./webworker.worker', { type: "module", name: "fibothread", })
-      this.webWorker.onmessage = function (data) {
-        thisRef.output = data.data;
-        thisRef.webWorker.terminate();
-      }
-    }
-  }
+   
   ClickDetail() {
     this._zone.runOutsideAngular(() => {
       setTimeout(() => {
@@ -379,7 +343,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
+  @HostListener('window:scroll', ['$event']) onScrollEvent($event: any) {
     if (window.scrollY > 20) {
       this.navbar.nativeElement.classList.add('sticky');
     }
@@ -390,7 +354,7 @@ export class AppComponent implements OnInit {
 
   }
 
-  example(element) {
+  example(element: any) {
     if (element.children[0].classList.contains('fa-bars')) {
       element.children[0].classList.remove('fa-bars');
       element.children[0].classList.add('fa-times');
@@ -420,7 +384,7 @@ export class AppComponent implements OnInit {
 
   }
 
-  hidemenu(element) {
+  hidemenu(element: any) {
     const ele: any = document.getElementsByClassName('menu');
     ele[0].classList.remove('active');
     element.children[0].classList.remove('fa-times')
@@ -428,7 +392,7 @@ export class AppComponent implements OnInit {
     const homeImage: any = document.getElementsByClassName('home-image');
     homeImage[0].removeAttribute("style", "z-index:-1 !important");
   }
-  checkMCA(element) {
+  checkMCA(element: any) {
     if (element.parentElement.parentElement.children[1].classList
       .contains('education-is-info-none')) {
       element.parentElement.parentElement.children[1].classList
@@ -452,7 +416,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  navigateSocial(string) {
+  navigateSocial(string: string) {
     switch (string) {
       case 'twitter':
         {
@@ -510,7 +474,7 @@ export class AppComponent implements OnInit {
       headers: headers
     });
   }
-  submit(submit) {
+  submit(submit: any) {
     let message: string = '';
     if (this.info.firstname == '') {
       message = 'Please enter the first name';

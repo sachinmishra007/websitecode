@@ -1,5 +1,5 @@
-import simpleIcons, { SimpleIcon } from "simple-icons";
-import * as icons from "simple-icons/icons";
+import { SimpleIcon } from "simple-icons";
+import * as icons from "simple-icons";
 const urls = {
     "urls": {
         ".NET": "https://dotnet.microsoft.com",
@@ -54,7 +54,7 @@ export function get(name: string | Array<string>, type?: ExportType | 'URL' | 'H
 
     const result = name.map((iconName) => {
         // debugger;
-        const icon = icons["si" + iconName.substring(0, 1).toUpperCase() + iconName.substring(1, iconName.length)];
+        const icon = (<any>icons)["si" + iconName.substring(0, 1).toUpperCase() + iconName.substring(1, iconName.length)];
         if (icon === undefined) {
             if (name.length == 1) {
                 return undefined;

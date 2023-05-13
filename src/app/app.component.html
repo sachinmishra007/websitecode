@@ -90,250 +90,252 @@
 <div id="particles-js"></div> <!-- stats - count particles -->
 
 <nav class="navbar" #navbar>
-    <div class="max-width">
-        <div class="logo">
-            <a href="#">
-                Sach<span (click)="navigateSocial('linkedin')">in</span>
-            </a>
-        </div>
-        <ul class="menu">
-            <li>
-                <div (click)="hidemenu(element)" class="active_link"><a href="#home">Home</a></div>
-            </li>
-            <li>
-                <div (click)="hidemenu(element)" class="active_link"><a href="#about">About</a></div>
-            </li>
-            <li>
-                <div (click)="hidemenu(element)" class="active_link"><a href="#services">Services</a></div>
-            </li>
-            <li>
-                <div (click)="hidemenu(element)" class="active_link"><a href="#skills">Skills</a></div>
-            </li>
-            <li>
-                <div (click)="hidemenu(element)" class="active_link"><a href="#certification">Certification</a></div>
-            </li>
-            <li>
-                <div (click)="hidemenu(element)" class="active_link"><a href="#employment">Experience</a></div>
-            </li>
-            <li>
-                <div (click)="hidemenu(element)" class="active_link"><a href="#education">Education</a></div>
-            </li>
-            <!-- <li>
+  <div class="max-width">
+    <div class="logo">
+      <a href="#">
+        Sach<span (click)="navigateSocial('linkedin')">in</span>
+      </a>
+    </div>
+    <ul class="menu">
+      <li>
+        <div (click)="hidemenu(element)" class="active_link"><a href="#home">Home</a></div>
+      </li>
+      <li>
+        <div (click)="hidemenu(element)" class="active_link"><a href="#about">About</a></div>
+      </li>
+      <li>
+        <div (click)="hidemenu(element)" class="active_link"><a href="#services">Services</a></div>
+      </li>
+      <li>
+        <div (click)="hidemenu(element)" class="active_link"><a href="#skills">Skills</a></div>
+      </li>
+      <li>
+        <div (click)="hidemenu(element)" class="active_link"><a href="#certification">Certification</a></div>
+      </li>
+      <li>
+        <div (click)="hidemenu(element)" class="active_link"><a href="#employment">Experience</a></div>
+      </li>
+      <li>
+        <div (click)="hidemenu(element)" class="active_link"><a href="#education">Education</a></div>
+      </li>
+      <!-- <li>
                 <div class="active_link"><a href="#">Projects</a></div>
             </li> -->
-        </ul>
-        <div (click)="example(element)" class="menu-btn" #element>
-            <i class="fas fa-bars"></i>
-        </div>
+    </ul>
+    <div (click)="example(element)" class="menu-btn" #element>
+      <i class="fas fa-bars"></i>
     </div>
+  </div>
 </nav>
 
 <section class="home" id="home">
-    <div class="max-width">
-        <div class="home-content">
-            <div class="text-1" data-aos="fade-right">Hello,my name is</div>
-            <div class="text-2" data-aos="fade-up">Sachin Mishra</div>
-            <div class="text-3">and I'm a <span class="typeinfo"></span></div>
-            <div data-aos="fade-up" class="btn-67" (click)="download()">
-                Download Resume
-            </div>
-        </div>
-        <div class="home-image">
-            <img data-aos="fade-down" style="width: 300px;" src="assets//image.svg">
-            <div data-aos="fade-up" class="icons">
-                <span (click)="navigateSocial('github')"><i class="fab fa-github"></i></span>
-                <span (click)="navigateSocial('twitter')"><i class="fab fa-twitter"></i></span>
-                <span (click)="navigateSocial('overflow')"><i class="fab fa-stack-overflow"></i></span>
-                <span (click)="navigateSocial('facebook')"><i class="fab fa-facebook-f"></i></span>
-                <span (click)="navigateSocial('instagram')"><i class="fab fa-instagram"></i></span>
-            </div>
-        </div>
+  <div class="max-width">
+    <div class="home-content">
+      <div class="text-1" data-aos="fade-right">Hello,my name is</div>
+      <div class="text-2" data-aos="fade-up">Sachin Mishra</div>
+      <div class="text-3">and I'm a <span class="typeinfo"></span></div>
+      <div data-aos="fade-up" class="btn-67" (click)="download()">
+        Download Resume
+      </div>
     </div>
+    <div class="home-image">
+      <img data-aos="fade-down" style="width: 300px;" src="assets//image.svg">
+      <div data-aos="fade-up" class="icons">
+        <span (click)="navigateSocial('github')"><i class="fab fa-github"></i></span>
+        <span (click)="navigateSocial('twitter')"><i class="fab fa-twitter"></i></span>
+        <span (click)="navigateSocial('overflow')"><i class="fab fa-stack-overflow"></i></span>
+        <span (click)="navigateSocial('facebook')"><i class="fab fa-facebook-f"></i></span>
+        <span (click)="navigateSocial('instagram')"><i class="fab fa-instagram"></i></span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="about" id="about">
-    <div class="max-width">
-        <h2 class="about-me">About me</h2>
-        <div data-aos="fade-up" class="about-content">
-            <div class="column left">
-                <img src="https://pbs.twimg.com/profile_images/1428660276778258436/-0tHu1AP_400x400.jpg"
-                    alt="Sachin Mishra - CKA" />
-            </div>
-            <div class="column right">
-                <div class="text">My Name is sachin and I am Professionally <span>Full Stack Developer</span></div>
-                <div class="objective">
-                    <div class="info">
-                        <p>
-                            To work in dynamic, professional and enterprising environment which will provide me the
-                            potential for advancement and increased IT Skills, decision-making responsibility through
-                            consistent learning under the Business and IT Leaders
-                        </p>
-                    </div>
-                    <div class="info">
-                        <ul class="basic-info">
-                            <li data-aos="fade-up">
-                                Total experience of <span><b>{{expInfo.totalExperience}}+</b></span> years as Senior
-                                Software Engineer
-                            </li>
-                            <li data-aos="fade-up">
-                                Bring Specific expertise and excellence to the design, instruction and operation of
-                                technical solutions.
-                            </li>
-                            <li data-aos="fade-up">
-                                Providing excellent customer service and product delivery by assisting in IT Solutions
-                                and providing strategic guidance within stipulated time.
-                            </li>
-                            <li data-aos="fade-up">
-                                Young, Energetic, Ability to work well and hard in a team or in individual environment.
-                            </li>
-                            <li data-aos="fade-up">
-                                Good team player with effective communication and good presentation skills.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <div class="max-width">
+    <h2 class="about-me">About me</h2>
+    <div data-aos="fade-up" class="about-content">
+      <div class="column left">
+        <img src="https://pbs.twimg.com/profile_images/1428660276778258436/-0tHu1AP_400x400.jpg"
+          alt="Sachin Mishra - CKA" />
+      </div>
+      <div class="column right">
+        <div class="text">My Name is sachin and I am Professionally <span>Full Stack Developer</span></div>
+        <div class="objective">
+          <div class="info">
+            <p>
+              To work in dynamic, professional and enterprising environment which will provide me the
+              potential for advancement and increased IT Skills, decision-making responsibility through
+              consistent learning under the Business and IT Leaders
+            </p>
+          </div>
+          <div class="info">
+            <ul class="basic-info">
+              <li data-aos="fade-up">
+                Total experience of <span><b>{{expInfo.totalExperience}}+</b></span> years as Senior
+                Software Engineer
+              </li>
+              <li data-aos="fade-up">
+                Bring Specific expertise and excellence to the design, instruction and operation of
+                technical solutions.
+              </li>
+              <li data-aos="fade-up">
+                Providing excellent customer service and product delivery by assisting in IT Solutions
+                and providing strategic guidance within stipulated time.
+              </li>
+              <li data-aos="fade-up">
+                Young, Energetic, Ability to work well and hard in a team or in individual environment.
+              </li>
+              <li data-aos="fade-up">
+                Good team player with effective communication and good presentation skills.
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 
 <section class="services" id="services">
-    <div class="max-width">
-        <h2 class="services-title">Services</h2>
-        <div class="services-cards">
-            <div data-aos="fade-right" class="card">
-                <div class="box">
-                    <div class="card-icon"><img src="assets//cloud.svg"></div>
-                    <div class="card-title">Cloud</div>
-                    <div class="card-description">Having extensive and robust knowledge of the Microsoft Azure colud
-                        development with different web based application. Also experienced resource in developing
-                        solution such as Azure Functions.</div>
-                </div>
-            </div>
-
-            <div data-aos="fade-down" class="card">
-                <div class="box">
-                    <div class="card-icon"><img src="assets//webdesign.svg"></div>
-                    <div class="card-title">Web design</div>
-                    <div class="card-description">Well versed with latest web technologies such as HTML, CSS and JS.
-                        Which enables to give the solution to implement modern ERP,E-commerce sites.</div>
-                </div>
-            </div>
-            <div class="card" data-aos="fade-up">
-                <div class="box">
-                    <div class="card-icon"><img src="assets//automate.svg"></div>
-                    <div class="card-title">Azure DevOps</div>
-                    <div class="card-description">Having the extensive knowdegle and experience in implementing the
-                        solution such as azure agent customization, creating the independent CI/CD using azure devops
-                        tool. </div>
-                </div>
-            </div>
-            <div class="card" data-aos="fade-right">
-                <div class="box">
-                    <div class="card-icon"><img src="assets//frontend.svg"></div>
-                    <div class="card-title">Frontend Developer</div>
-                    <div class="card-description">Experienced resource to implement backend solution using modern web
-                        framework such angular, vue and react with help of Micro frontend ,plugin Architecture </div>
-                </div>
-            </div>
-            <div class="card" data-aos="fade-up">
-                <div class="box">
-                    <div class="card-icon"><img src="assets//webdesign1.svg"></div>
-                    <div class="card-title">Backend Developer</div>
-                    <div class="card-description">Experienced resource to backend solution using sql database and
-                        various Microsoft solution such service bus, fabric and azure function for backend api
-                        development.</div>
-                </div>
-            </div>
-            <div class="card" data-aos="fade-up">
-                <div class="box">
-                    <div class="card-icon"><img src="assets//microservice.svg"></div>
-                    <div class="card-title">Microservices</div>
-                    <div class="card-description"> Well qualified as well as certified resource to implement on .Net
-                        Platform using Docker and Kubernetes services. </div>
-                </div>
-            </div>
+  <div class="max-width">
+    <h2 class="services-title">Services</h2>
+    <div class="services-cards">
+      <div data-aos="fade-right" class="card">
+        <div class="box">
+          <div class="card-icon"><img src="assets//cloud.svg"></div>
+          <div class="card-title">Cloud</div>
+          <div class="card-description">Having extensive and robust knowledge of the Microsoft Azure colud
+            development with different web based application. Also experienced resource in developing
+            solution such as Azure Functions.</div>
         </div>
+      </div>
+
+      <div data-aos="fade-down" class="card">
+        <div class="box">
+          <div class="card-icon"><img src="assets//webdesign.svg"></div>
+          <div class="card-title">Web design</div>
+          <div class="card-description">Well versed with latest web technologies such as HTML, CSS and JS.
+            Which enables to give the solution to implement modern ERP,E-commerce sites.</div>
+        </div>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <div class="box">
+          <div class="card-icon"><img src="assets//automate.svg"></div>
+          <div class="card-title">Azure DevOps</div>
+          <div class="card-description">Having the extensive knowdegle and experience in implementing the
+            solution such as azure agent customization, creating the independent CI/CD using azure devops
+            tool. </div>
+        </div>
+      </div>
+      <div class="card" data-aos="fade-right">
+        <div class="box">
+          <div class="card-icon"><img src="assets//frontend.svg"></div>
+          <div class="card-title">Frontend Developer</div>
+          <div class="card-description">Experienced resource to implement backend solution using modern web
+            framework such angular, vue and react with help of Micro frontend ,plugin Architecture </div>
+        </div>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <div class="box">
+          <div class="card-icon"><img src="assets//webdesign1.svg"></div>
+          <div class="card-title">Backend Developer</div>
+          <div class="card-description">Experienced resource to backend solution using sql database and
+            various Microsoft solution such service bus, fabric and azure function for backend api
+            development.</div>
+        </div>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <div class="box">
+          <div class="card-icon"><img src="assets//microservice.svg"></div>
+          <div class="card-title">Microservices</div>
+          <div class="card-description"> Well qualified as well as certified resource to implement on .Net
+            Platform using Docker and Kubernetes services. </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 <section class="skills" id="skills">
-    <div class="max-width">
-        <h2 class="skills-title">My skills</h2>
-        <div class="skill-content">
-            <div data-aos="fade-right" class="column left">
-                <div class="text">
-                    My Creative skills & experiences.
-                </div>
-                <p>
-                    My skills includes attending the sprint Kickoff Meeting & get the clarity about the requirement from PMG, accordingly
-                    taking the Sprint Story and Bug for the Development.Provide suggestions as end user to the software development
-                    team to improve the product using various development  and deployment tools. During development life cylce i prefer to write Code,Unit & Automation Test cases using testing framework.
-                    Generating the Code Coverage for the for overall test cases using open cover.
-                </p>
-            </div>
-            <div class="column right" data-aos="fade-up">
-                <div class="tecgTags" [innerHTML]="techTags"></div>
-            </div>
+  <div class="max-width">
+    <h2 class="skills-title">My skills</h2>
+    <div class="skill-content">
+      <div data-aos="fade-right" class="column left">
+        <div class="text">
+          My Creative skills & experiences.
         </div>
+        <p>
+          My skills includes attending the sprint Kickoff Meeting & get the clarity about the requirement from PMG,
+          accordingly
+          taking the Sprint Story and Bug for the Development.Provide suggestions as end user to the software
+          development
+          team to improve the product using various development and deployment tools. During development life cylce i
+          prefer to write Code,Unit & Automation Test cases using testing framework.
+          Generating the Code Coverage for the for overall test cases using open cover.
+        </p>
+      </div>
+      <div class="column right" data-aos="fade-up">
+        <div class="tecgTags" [innerHTML]="techTags"></div>
+      </div>
     </div>
+  </div>
 </section>
 
 <section class="certification" id="certification">
-    <div class="max-width">
-        <h2 class="certification-title">Certification</h2>
-        <div class="certification-content">
-            <div data-aos="fade-right" class="certication-card">
-                <div class="box">
-                    <div class="cert-image">
-                        <img src="assets/cka.png">
-                    </div>
-                    <div class="cert-title">Certified Kubernetes Adminstrator (CKA)
-                    </div>
-                    <div class="cert-issued">
-                        CNCF [Cloud Native Computing Foundation]
-                    </div>
-                    <div class="cert-verify">
-                        <a target="_blank"
-                            href="https://www.youracclaim.com/badges/3c1d2ea0-167e-4d26-b524-b312f73cc15b">Verify</a>
-                    </div>
-                </div>
-            </div>
-            <div data-aos="fade-down" class="certication-card">
-                <div class="box">
-                    <div class="cert-image">
-                        <img src="assets/ikm.png">
-                    </div>
-                    <div class="cert-title">International Knowledge Measurement (IKM)
-                    </div>
-                    <div class="cert-issued">
-                        Larsent & Turbo Infotech
-                    </div>
-                    <div class="cert-verify">
-                        <a target="_blank"
-                            href="https://drive.google.com/file/d/0B16OjVtwKifIeXh5ZEFNNXdaa0k/view?usp=sharing">Verify</a>
-                    </div>
-                </div>
-
-            </div>
-            <div data-aos="fade-up" class="certication-card">
-                <div class="box">
-                    <div class="cert-image">
-                        <img src="assets//microsoft.png">
-                    </div>
-                    <div class="cert-title">Microsoft - React Router & Redux
-                    </div>
-                    <div class="cert-issued">
-                        Microsoft
-                    </div>
-                    <div class="cert-verify">
-                        <a target="_blank"
-                            href="https://onedrive.live.com/view.aspx?cid=7F448F5B3426853C&authKey=%21ADSG6bcxZjHymug&resid=7F448F5B3426853C%21672&ithint=%2Epdf&open=true&app=WordPdf">Verify</a>
-                    </div>
-                </div>
-            </div>
+  <div class="max-width">
+    <h2 class="certification-title">Certification</h2>
+    <div class="certification-content">
+      <div data-aos="fade-right" class="certication-card">
+        <div class="box">
+          <div class="cert-image">
+            <img src="assets/cka.png">
+          </div>
+          <div class="cert-title">Certified Kubernetes Adminstrator (CKA)
+          </div>
+          <div class="cert-issued">
+            CNCF [Cloud Native Computing Foundation]
+          </div>
+          <div class="cert-verify">
+            <a target="_blank" href="https://www.youracclaim.com/badges/3c1d2ea0-167e-4d26-b524-b312f73cc15b">Verify</a>
+          </div>
         </div>
+      </div>
+      <div data-aos="fade-down" class="certication-card">
+        <div class="box">
+          <div class="cert-image">
+            <img src="assets/ikm.png">
+          </div>
+          <div class="cert-title">International Knowledge Measurement (IKM)
+          </div>
+          <div class="cert-issued">
+            Larsent & Turbo Infotech
+          </div>
+          <div class="cert-verify">
+            <a target="_blank"
+              href="https://drive.google.com/file/d/0B16OjVtwKifIeXh5ZEFNNXdaa0k/view?usp=sharing">Verify</a>
+          </div>
+        </div>
+
+      </div>
+      <div data-aos="fade-up" class="certication-card">
+        <div class="box">
+          <div class="cert-image">
+            <img src="assets//microsoft.png">
+          </div>
+          <div class="cert-title">Microsoft - React Router & Redux
+          </div>
+          <div class="cert-issued">
+            Microsoft
+          </div>
+          <div class="cert-verify">
+            <a target="_blank"
+              href="https://onedrive.live.com/view.aspx?cid=7F448F5B3426853C&authKey=%21ADSG6bcxZjHymug&resid=7F448F5B3426853C%21672&ithint=%2Epdf&open=true&app=WordPdf">Verify</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 <!-- <section class="blogs" id="blogs">
     <div class="max-width">
@@ -345,330 +347,330 @@
     </div>
 </section> -->
 <section class="employment" id="employment">
-    <div class="max-width">
-        <h2 class="employment-title">Work Experience</h2>
-        <div class="employment-content">
-            <div class="container">
-                <div class="timeline">
-                    <ul class="timeline-info">
-                        <li data-aos="fade-up">
-                            <div class="timeline-content">
-                                <div class="company-info">
-                                    <div class="compnay-logo">
-                                        <img src="assets/ms.png">
-                                    </div>
-                                    <div class="company-details">
-                                        <div class="designation-info">
-                                            <h3 class="date">January 2021 - Present </h3>
-                                            <h1>Senior Manager</h1>
-                                        </div>
-                                        <div class="firm-info">
-                                            Morgan Stanley Advantage Services Pvt. Ltd
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="role-info">
-                                    <p>
-                                        Currently working on Renovation of BTI/MRC Project which majorly involves the
-                                        complete UI to Backend
-                                        renovation of the entire project by leveraging the latest technology.
-                                    </p>
-                                    <p>
-                                        Attending the Sprint <b>Product Backlog Meeting</b> & get the clarity about the
-                                        requirement from PMG/Product Owners and accordingly taking the Sprint Story and
-                                        Bug for the Development.
-                                    </p>
-                                    <p>
-                                        Incorporating the best practices in UI/UX and elegant backend solutions for the
-                                        product.
-                                    </p>
-                                    <p>
-                                        Taking care of e2e delivery of the product and ensuring everything is working
-                                        smooth across
-                                        different environment. And giving the demonstration of the design product and
-                                        features to end user on
-                                        timely manner.
-
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li data-aos="fade-up">
-                            <div class="timeline-content">
-                                <div class="company-info">
-                                    <div class="compnay-logo">
-                                        <img src="assets/gep.svg">
-                                    </div>
-                                    <div class="company-details">
-                                        <div class="designation-info">
-                                            <h3 class="date">December 2017 - January 2021 </h3>
-                                            <h1>Senior Software Engineer</h1>
-                                        </div>
-                                        <div class="firm-info">
-                                            GEP Private Solution Ltd.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="role-info">
-                                    <p>
-                                        Attending the Sprint Kickoff Meeting & get the clarity about the requirement
-                                        from PMG, accordingly taking the Sprint Story and Bug for the Development.
-                                    </p>
-                                    <p>
-                                        Activities include the delivery of the Sprint Story and Resolution of the Bug
-                                        with defined timeline so that to Avoid sprint spillover
-                                    </p>
-                                    <p>
-                                        Implementing the Solution according the requirement and assisting to deploy the
-                                        solution on UAT and Production
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li data-aos="fade-up">
-                            <div class="timeline-content">
-                                <div class="company-info">
-                                    <div class="compnay-logo">
-                                        <img src="assets/lti.png">
-                                    </div>
-                                    <div class="company-details">
-                                        <div class="designation-info">
-                                            <h3 class="date">August 2015 - November 2017 </h3>
-                                            <h1>Software Engineer</h1>
-                                        </div>
-                                        <div class="firm-info">
-                                            Larsen & Tubro Infotech
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="role-info">
-                                    <p>
-                                        Designing & Developing the effective <b>Front and Backend solutions</b> based
-                                        upon the
-                                        requirement for the Existing as well as new Applications i.e. WIM Quotes and
-                                        WIMQuotesAdmin Console.
-                                    </p>
-                                    <p>
-                                        Understanding customer’s requirements from <b>Functional and Business
-                                            Requirement
-                                            Definition (FRD, BRD)</b> and analyzing their business objectives for
-                                        developing a
-                                        best fit technical solution based on Company solutions.
-                                    </p>
-                                    <p>
-                                        Creating and maintaining technical documentations related to the
-                                        application/solutions. uploading Document to the knowledge base to be available
-                                        to the other users.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li data-aos="fade-up">
-                            <div class="timeline-content">
-                                <div class="company-info">
-                                    <div class="compnay-logo">
-                                        <img src="assets/seed.jpg">
-                                    </div>
-                                    <div class="company-details">
-                                        <div class="designation-info">
-                                            <h3 class="date">December,2014 - July,2015 </h3>
-                                            <h1>Software Engineering Intern </h1>
-                                        </div>
-                                        <div class="firm-info">
-                                            Seed Core Group
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="role-info">
-                                    <p>
-                                        To work on Windows Forms based on Retail Core Product. Developing and
-                                        Customizing the product according to the client’s requirement.
-                                    </p>
-                                    <p>
-                                        Develop and Prepare different crystal reports based upon the requirement.
-                                    </p>
-                                    <p>
-                                        Using bug tool to identify defects and bugs and make the changes to the product
-                                        and resolve them.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li data-aos="fade-up">
-                            <div class="timeline-content">
-                                <div class="company-info">
-                                    <div class="compnay-logo">
-                                        <img src="assets/edu.png">
-                                    </div>
-                                    <div class="company-details">
-                                        <div class="designation-info">
-                                            <h3 class="date">June,2011 - July,2012 </h3>
-                                            <h1>Trainee Programmer </h1>
-                                        </div>
-                                        <div class="firm-info">
-                                            Edulearn Infosytems
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="role-info">
-                                    <p>
-                                        To create the windows services and SQL procedures mainly on backend of the
-                                        system.
-                                    </p>
-                                    <p>
-                                        Developing and preparing the services according to the business requirement and
-                                        integrating with UI to achieve the business objective.
-                                    </p>
-                                    <p>
-                                        Testing and preparing the technical documents for the new applications as well
-                                        as enchantments.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+  <div class="max-width">
+    <h2 class="employment-title">Work Experience</h2>
+    <div class="employment-content">
+      <div class="container">
+        <div class="timeline">
+          <ul class="timeline-info">
+            <li data-aos="fade-up">
+              <div class="timeline-content">
+                <div class="company-info">
+                  <div class="compnay-logo">
+                    <img src="assets/ms.png">
+                  </div>
+                  <div class="company-details">
+                    <div class="designation-info">
+                      <h3 class="date">January 2021 - Present </h3>
+                      <h1>Senior Manager</h1>
+                    </div>
+                    <div class="firm-info">
+                      Morgan Stanley Advantage Services Pvt. Ltd
+                    </div>
+                  </div>
                 </div>
-            </div>
+                <div class="role-info">
+                  <p>
+                    Currently working on Renovation of BTI/MRC Project which majorly involves the
+                    complete UI to Backend
+                    renovation of the entire project by leveraging the latest technology.
+                  </p>
+                  <p>
+                    Attending the Sprint <b>Product Backlog Meeting</b> & get the clarity about the
+                    requirement from PMG/Product Owners and accordingly taking the Sprint Story and
+                    Bug for the Development.
+                  </p>
+                  <p>
+                    Incorporating the best practices in UI/UX and elegant backend solutions for the
+                    product.
+                  </p>
+                  <p>
+                    Taking care of e2e delivery of the product and ensuring everything is working
+                    smooth across
+                    different environment. And giving the demonstration of the design product and
+                    features to end user on
+                    timely manner.
+
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-aos="fade-up">
+              <div class="timeline-content">
+                <div class="company-info">
+                  <div class="compnay-logo">
+                    <img src="assets/gep.svg">
+                  </div>
+                  <div class="company-details">
+                    <div class="designation-info">
+                      <h3 class="date">December 2017 - January 2021 </h3>
+                      <h1>Senior Software Engineer</h1>
+                    </div>
+                    <div class="firm-info">
+                      GEP Private Solution Ltd.
+                    </div>
+                  </div>
+                </div>
+                <div class="role-info">
+                  <p>
+                    Attending the Sprint Kickoff Meeting & get the clarity about the requirement
+                    from PMG, accordingly taking the Sprint Story and Bug for the Development.
+                  </p>
+                  <p>
+                    Activities include the delivery of the Sprint Story and Resolution of the Bug
+                    with defined timeline so that to Avoid sprint spillover
+                  </p>
+                  <p>
+                    Implementing the Solution according the requirement and assisting to deploy the
+                    solution on UAT and Production
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li data-aos="fade-up">
+              <div class="timeline-content">
+                <div class="company-info">
+                  <div class="compnay-logo">
+                    <img src="assets/lti.png">
+                  </div>
+                  <div class="company-details">
+                    <div class="designation-info">
+                      <h3 class="date">August 2015 - November 2017 </h3>
+                      <h1>Software Engineer</h1>
+                    </div>
+                    <div class="firm-info">
+                      Larsen & Tubro Infotech
+                    </div>
+                  </div>
+                </div>
+
+                <div class="role-info">
+                  <p>
+                    Designing & Developing the effective <b>Front and Backend solutions</b> based
+                    upon the
+                    requirement for the Existing as well as new Applications i.e. WIM Quotes and
+                    WIMQuotesAdmin Console.
+                  </p>
+                  <p>
+                    Understanding customer’s requirements from <b>Functional and Business
+                      Requirement
+                      Definition (FRD, BRD)</b> and analyzing their business objectives for
+                    developing a
+                    best fit technical solution based on Company solutions.
+                  </p>
+                  <p>
+                    Creating and maintaining technical documentations related to the
+                    application/solutions. uploading Document to the knowledge base to be available
+                    to the other users.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-aos="fade-up">
+              <div class="timeline-content">
+                <div class="company-info">
+                  <div class="compnay-logo">
+                    <img src="assets/seed.jpg">
+                  </div>
+                  <div class="company-details">
+                    <div class="designation-info">
+                      <h3 class="date">December,2014 - July,2015 </h3>
+                      <h1>Software Engineering Intern </h1>
+                    </div>
+                    <div class="firm-info">
+                      Seed Core Group
+                    </div>
+                  </div>
+                </div>
+                <div class="role-info">
+                  <p>
+                    To work on Windows Forms based on Retail Core Product. Developing and
+                    Customizing the product according to the client’s requirement.
+                  </p>
+                  <p>
+                    Develop and Prepare different crystal reports based upon the requirement.
+                  </p>
+                  <p>
+                    Using bug tool to identify defects and bugs and make the changes to the product
+                    and resolve them.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li data-aos="fade-up">
+              <div class="timeline-content">
+                <div class="company-info">
+                  <div class="compnay-logo">
+                    <img src="assets/edu.png">
+                  </div>
+                  <div class="company-details">
+                    <div class="designation-info">
+                      <h3 class="date">June,2011 - July,2012 </h3>
+                      <h1>Trainee Programmer </h1>
+                    </div>
+                    <div class="firm-info">
+                      Edulearn Infosytems
+                    </div>
+                  </div>
+                </div>
+
+                <div class="role-info">
+                  <p>
+                    To create the windows services and SQL procedures mainly on backend of the
+                    system.
+                  </p>
+                  <p>
+                    Developing and preparing the services according to the business requirement and
+                    integrating with UI to achieve the business objective.
+                  </p>
+                  <p>
+                    Testing and preparing the technical documents for the new applications as well
+                    as enchantments.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <section class="education" id="education">
-    <div class="max-width">
-        <h2 class="education-title">Education</h2>
-        <div class="education-info">
-            <div data-aos="fade-up" class="education-card">
-                <div class="education-details">
-                    <span>Master of Computer Application <span class="course-initials">( MCA )</span></span>
-                    <span (click)="checkMCA(mca)" #mca><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="education-is-info">
-                    <div class="education-percent">
-                        <span>8.89 (CGPI) </span>
-                        <span>2015 </span>
-                    </div>
-                    <div class="education-cource">
-                        <span> MCA (Master of Computer Application) </span>
-                        <span>Thakur Institute of Management Studies, Career Development & Research (University of
-                            Mumbai) </span>
-                    </div>
-                </div>
-            </div>
-            <div data-aos="fade-right" class="education-card">
-                <div class="education-details">
-                    <span>Bachelor of Science in Information Technology <span class="course-initials">( Bsc. (I.T.)
-                            )</span></span>
-                    <span (click)="checkMCA(bscit)" #bscit><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="education-is-info">
-                    <div class="education-percent">
-                        <span>72.96%</span>
-                        <span>2011</span>
-                    </div>
-                    <div class="education-cource">
-                        <span> B.Sc. (Information Technology) </span>
-                        <span>R. D. National & W. A. Science College (University of Mumbai) </span>
-                    </div>
-                </div>
-            </div>
-            <div data-aos="fade-up" class="education-card">
-                <div class="education-details">
-                    <span class="course-initials"> H.S.C </span>
-                    <span (click)="checkMCA(hsc)" #hsc><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="education-is-info">
-                    <div class="education-percent">
-                        <span> 69.33% </span>
-                        <span>2008</span>
-                    </div>
-                    <div class="education-cource">
-                        <span> H.S.C</span>
-                        <span>M. D. College (Maharashtra State Board) </span>
-                    </div>
-                </div>
-            </div>
-            <div data-aos="fade-right" class="education-card">
-                <div class="education-details">
-                    <span class="course-initials"> S.S.C </span>
-                    <span (click)="checkMCA(ssc)" #ssc><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="education-is-info">
-                    <div class="education-percent">
-                        <span>71.86% </span>
-                        <span>2006</span>
-                    </div>
-                    <div class="education-cource">
-                        <span> S.S.C </span>
-                        <span>Guru Nanak High School (Maharashtra State Board) </span>
-                    </div>
-                </div>
-            </div>
+  <div class="max-width">
+    <h2 class="education-title">Education</h2>
+    <div class="education-info">
+      <div data-aos="fade-up" class="education-card">
+        <div class="education-details">
+          <span>Master of Computer Application <span class="course-initials">( MCA )</span></span>
+          <span (click)="checkMCA(mca)" #mca><i class="fas fa-plus"></i></span>
         </div>
+        <div class="education-is-info">
+          <div class="education-percent">
+            <span>8.89 (CGPI) </span>
+            <span>2015 </span>
+          </div>
+          <div class="education-cource">
+            <span> MCA (Master of Computer Application) </span>
+            <span>Thakur Institute of Management Studies, Career Development & Research (University of
+              Mumbai) </span>
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-right" class="education-card">
+        <div class="education-details">
+          <span>Bachelor of Science in Information Technology <span class="course-initials">( Bsc. (I.T.)
+              )</span></span>
+          <span (click)="checkMCA(bscit)" #bscit><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="education-is-info">
+          <div class="education-percent">
+            <span>72.96%</span>
+            <span>2011</span>
+          </div>
+          <div class="education-cource">
+            <span> B.Sc. (Information Technology) </span>
+            <span>R. D. National & W. A. Science College (University of Mumbai) </span>
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-up" class="education-card">
+        <div class="education-details">
+          <span class="course-initials"> H.S.C </span>
+          <span (click)="checkMCA(hsc)" #hsc><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="education-is-info">
+          <div class="education-percent">
+            <span> 69.33% </span>
+            <span>2008</span>
+          </div>
+          <div class="education-cource">
+            <span> H.S.C</span>
+            <span>M. D. College (Maharashtra State Board) </span>
+          </div>
+        </div>
+      </div>
+      <div data-aos="fade-right" class="education-card">
+        <div class="education-details">
+          <span class="course-initials"> S.S.C </span>
+          <span (click)="checkMCA(ssc)" #ssc><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="education-is-info">
+          <div class="education-percent">
+            <span>71.86% </span>
+            <span>2006</span>
+          </div>
+          <div class="education-cource">
+            <span> S.S.C </span>
+            <span>Guru Nanak High School (Maharashtra State Board) </span>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <section class="contact" id="contact">
-    <div data-aos="fade-up" class="max-width">
-        <h2 class="title">Contact</h2>
-        <div #infoMessage class="message-info">
-            <div class="info-icon">
-                <i class="fas fa-info-circle"></i>
-            </div>
-            <div class="info-message">
-                Please Enter the First Name
-            </div>
-            <div class="info-icon" (click)="close()">
-                <i class="fas fa-times-circle"></i>
-            </div>
-        </div>
-        <div class="main-contact-form">
-            <div data-aos="fade-up" class="address-info">
-                <div class="address-tile">
-                    <div class="icons"><i class="fas fa-envelope-open-text"></i></div>
-                    <div class="value">sachinmishra609@gmail.com</div>
-                </div>
-                <div class="address-tile">
-                    <div class="icons"><i class="fas fa-phone"></i></div>
-                    <div class="value">+91-9594500523</div>
-                </div>
-                <div class="address-tile">
-                    <div class="icons"><i class="far fa-address-card"></i></div>
-                    <div class="value">Mumbai,Maharashtra-400016</div>
-                </div>
-            </div>
-            <div data-aos="fade-right" class="sendinfo">
-                <div class="padding10 namedetails send-name">
-                    <input [(ngModel)]="info.firstname" type="text" placeholder="First Name">
-                    <input [(ngModel)]="info.lastname" type="text" placeholder="Last Name">
-                </div>
-                <div class="padding10 send-name">
-                    <input [(ngModel)]="info.subject" type="text" placeholder="Subject">
-                </div>
-                <div class="padding10 send-name">
-                    <input [(ngModel)]="info.email" type="text" placeholder="Email">
-                </div>
-                <div class="padding10 send-name">
-                    <textarea [(ngModel)]="info.description" name="Description" rows="4" cols="50"
-                        placeholder="Description"></textarea>
-                </div>
-                <div class="padding10 button" (click)="submit(submitElem)">
-                    <div class="submit-btn" #submitElem>
-                        Submit
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div data-aos="fade-up" class="max-width">
+    <h2 class="title">Contact</h2>
+    <div #infoMessage class="message-info">
+      <div class="info-icon">
+        <i class="fas fa-info-circle"></i>
+      </div>
+      <div class="info-message">
+        Please Enter the First Name
+      </div>
+      <div class="info-icon" (click)="close()">
+        <i class="fas fa-times-circle"></i>
+      </div>
     </div>
+    <div class="main-contact-form">
+      <div data-aos="fade-up" class="address-info">
+        <div class="address-tile">
+          <div class="icons"><i class="fas fa-envelope-open-text"></i></div>
+          <div class="value">sachinmishra609@gmail.com</div>
+        </div>
+        <div class="address-tile">
+          <div class="icons"><i class="fas fa-phone"></i></div>
+          <div class="value">+91-9594500523</div>
+        </div>
+        <div class="address-tile">
+          <div class="icons"><i class="far fa-address-card"></i></div>
+          <div class="value">Mumbai,Maharashtra-400016</div>
+        </div>
+      </div>
+      <div data-aos="fade-right" class="sendinfo">
+        <div class="padding10 namedetails send-name">
+          <input [(ngModel)]="info.firstname" type="text" placeholder="First Name">
+          <input [(ngModel)]="info.lastname" type="text" placeholder="Last Name">
+        </div>
+        <div class="padding10 send-name">
+          <input [(ngModel)]="info.subject" type="text" placeholder="Subject">
+        </div>
+        <div class="padding10 send-name">
+          <input [(ngModel)]="info.email" type="text" placeholder="Email">
+        </div>
+        <div class="padding10 send-name">
+          <textarea [(ngModel)]="info.description" name="Description" rows="4" cols="50"
+            placeholder="Description"></textarea>
+        </div>
+        <div class="padding10 button" (click)="submit(submitElem)">
+          <div class="submit-btn" #submitElem>
+            Submit
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="footer" id="footer">
-    <div class="max-width">
-        <div class="copy-right">Copyright ©2021 All rights reserved to <span class="copyright">Sachin Mishra</span>
-        </div>
+  <div class="max-width">
+    <div class="copy-right">Copyright ©2021 All rights reserved to <span class="copyright">Sachin Mishra</span>
     </div>
+  </div>
 </section>
