@@ -9,6 +9,7 @@ import * as moment from 'moment';
 //import * as ParticlesConfig from '../assets/particlesjs-config.json';
 // const technologyShields = require("../app/simple-icons");
 import * as technologyShields from '../app/simple-icons';
+import { SwUpdate } from '@angular/service-worker';
 declare var particlesJS: any;
 @Component({
   selector: 'app-root',
@@ -75,7 +76,8 @@ export class AppComponent implements OnInit {
     // private _rourte: Router,
     private fb: FormBuilder,
     private _zone: NgZone,
-    private _httpClient: HttpClient
+    private _httpClient: HttpClient,
+    private _swUpdate: SwUpdate
   ) {
 
 
@@ -276,6 +278,22 @@ export class AppComponent implements OnInit {
 
     const typed = new Typed('.typeinfo', options);
     this.calculateExperience();
+    if (this._swUpdate.isEnabled) {
+      this._swUpdate.checkForUpdate().then((value: boolean) => {
+        if (value) {
+          this._swUpdate.activateUpdate().then(() => window.location.reload());
+          console.log("Updated");
+        }
+        else {
+          console.log('No Update Avaiable')
+        }
+
+      })
+      console.log("SW Update is enabled")
+    }
+    else {
+      console.log("SW Update is not enabled")
+    }
   }
 
   // drag(event: CdkDragDrop<string[]>) {
@@ -332,7 +350,7 @@ export class AppComponent implements OnInit {
   //   this.phoneForms.removeAt(i)
   // }
 
-   
+
   ClickDetail() {
     this._zone.runOutsideAngular(() => {
       setTimeout(() => {
