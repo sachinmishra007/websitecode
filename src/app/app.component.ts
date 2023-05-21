@@ -294,6 +294,8 @@ export class AppComponent implements OnInit {
     else {
       console.log("SW Update is not enabled")
     }
+
+    this._httpClient.get("https://jsonplaceholder.typicode.com/todos").subscribe((respse) => console.log(respse));
   }
 
   // drag(event: CdkDragDrop<string[]>) {

@@ -1,6 +1,19 @@
 {
   "$schema": "./node_modules/@angular/service-worker/config/schema.json",
   "index": "/index.html",
+  "dataGroups": [
+    {
+      "name": "jason-placeholder",
+      "urls": [
+        "https://jsonplaceholder.typicode.com/todos"
+      ],
+      "cacheConfig": {
+        "strategy": "performance",
+        "maxAge": "30m",
+      "maxSize": 10
+      }
+    }
+  ],
   "assetGroups": [
     {
       "name": "app",
